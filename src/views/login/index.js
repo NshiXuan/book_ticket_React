@@ -19,6 +19,7 @@ const Login = memo(() => {
     if (result.response) {
       return message.error(result.response.data, 1)
     }
+    // console.log(result);
     const { id, menu, token } = result
     localCache.setItem('token', token)
     localCache.setItem('id', id)
